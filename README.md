@@ -1,4 +1,5 @@
 ## AI_Parking_Occupancy_Detection(Segmentation)
+![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e88edaf2-1b40-47f6-a3fb-821d46000a67)
 - 최종 영상 (U-Net)
   [![Video Label](http://img.youtube.com/vi/B96UbpyoJ6A/0.jpg)]( https://youtu.be/B96UbpyoJ6A)
  
