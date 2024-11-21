@@ -26,18 +26,14 @@ https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDat
 1. 데이터 소개 
     - AI-Hub (주차 공간 탐색을 위한 차량 관점 복합 데이터)
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/a0fe9294-e33c-4257-a049-feeb2d5995d6/image.png)
+       ![image](https://github.com/user-attachments/assets/e990b950-ddf0-4276-a074-cce91caf2f27)
+
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/b15f4081-d259-40b0-b3ab-6bc13336fd58/image.png)
+       ![image (1)](https://github.com/user-attachments/assets/57479ba2-47bb-4be4-b474-a47e79a14b40)
+
         
         : 복합 데이터 목록 중 1️⃣**수량이 가장 많은** 데이터셋 뿐만 아니라,  2️⃣**LiDAR 로 촬영한 포인트 클라우드 데이터 파일**과 3️⃣**PCD 파일 포맷**으로 수집된 이미지 데이터가 가장 많았다. 그 중 LiDAR 데이터는 370번 폴더부터 443폴더까지 존재한다.
-        
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/e8a56648-a3b7-460b-9fbd-086014c1f848/image.png)
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/3b030004-07d3-4794-adfc-5e8a6fbd1a21/image.png)
-    
-
+   
 # 2. 클래스 정보와 EDA
 
 1. bbox3d와 segmentation의 클래스 정보 
@@ -51,42 +47,45 @@ https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDat
     | Cycle | 4,524 | bbox3d |
     | Pedestrian | 554 | bbox3d |
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/3c1724ba-3805-4750-ae2e-4887c18d3731/image.png)
+    ![image (2)](https://github.com/user-attachments/assets/1da0eb6f-a11c-44e3-a69d-611be63b29fd)
     
 2. bbox3d 투영 결과
     - bbox3d를 LiDAR의 pcd에 투영
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/304f1fad-c9a7-4866-9d5f-fc7fd5219dbf/bd64436a-09b9-4ff3-84b1-433ddc771de5.png)
+        ![image (3)](https://github.com/user-attachments/assets/7de7eb14-b6a4-4b20-bda0-64be6e2fbd17)
+
         
     - 3차원 투영 결과를 2차원 평면에 나타내기
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/e439d8dd-d48b-4312-adfb-9d641b5565eb/image.png)
+       ![image (4)](https://github.com/user-attachments/assets/8568cfa8-bce2-4681-abd4-80d6805087c1)
+
         
     - ‘point cloud data’ 읽고 ‘bbox3d’ 데이터 이용해서 3D 포인트 클라우드 시각화하기
         
-        [point_cloud_3d시각화.mp4](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/526eaffc-473b-4516-a5c4-b6750b51ce74/point_cloud_3d%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%A8%E1%84%92%E1%85%AA.mp4)
+       [영상]
         
     - bbox3d 이미지에 투영
         
-        ![원래 하려고 했던 것](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/c2310fcd-0a1c-4e17-8786-d9c5138f0ef2/image.png)
-        
-        원래 하려고 했던 것
-        
-        ![나온 결과](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/ebd73c01-fcd5-48ab-b8e0-fce67eacf097/download.png)
-        
-        나온 결과
-        
+       ![image (5)](https://github.com/user-attachments/assets/3faa3ec0-c686-402d-a3cc-dee681dbd202)
+       원래 하려고 했던 것
+      
+
+
+
+        ![download](https://github.com/user-attachments/assets/01194e02-cfae-4098-980d-a1ed3b5c4ae9)
+      나온 결과 
+      
         ⇒ 투영된 결과를 살펴본 끝에, 구체적인 프로젝트 주제를 도출하기 어려운 것으로 판단하였다. 이에 따라, 기존에 진행하려고 했던 Point Cloud 기반의 작업은 중단하기로 결정했다.
         
 3. Segmentation 투영 결과
     - ‘Segmentation’ 의 폴리곤 좌표를 이미지에 투영하기
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/67bcbc4f-9122-4461-98df-4ce0bb4f756f/image.png)
-        
+        ![image (6)](https://github.com/user-attachments/assets/935918cd-6b46-4945-8dcb-8f61fba3364f)
+
     - ‘Segmentation’ + ‘bbox2d’좌표를 이미지에 투영하기
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/5dcc6e2d-871c-463c-93a8-f7b22e706170/image.png)
-        
+       ![image (7)](https://github.com/user-attachments/assets/7ca5a313-a9ae-4ab1-b7f3-2e4511e4a656)
+
     
 
 # 3. 데이터셋 전처리 과정
@@ -95,33 +94,31 @@ https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDat
 2. 필터링된 JSON 파일은 총 30,000개 이상이었으나, 랜덤 샘플링을 통해 약 8,000개로 데이터를 축소하였다.
 3. 초기에는 16,000개의 이미지를 6:2:2 비율로 훈련, 검증, 테스트 데이터셋으로 분할하여 모델을 학습시키고자 했으나, OOM(Out of Memory) 문제가 발생하였다. 이를 해결하기 위해 데이터 크기를 절반으로 줄였으며, 이미지와 JSON 파일의 라벨 데이터를 1/3 크기(640x360)로 리사이즈하여 학습을 진행했다.
     
-    ![최종적으로 사용된 데이터셋 수](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/2337ef67-fff8-469e-a998-1f4eb7b14c74/image.png)
-    
+    ![image (8)](https://github.com/user-attachments/assets/fe671994-fb5a-4d57-9e0e-bee009739ad4)
+
     최종적으로 사용된 데이터셋 수
     
 
 # 4. 모델 학습
 
-- 
-
 ## 1. U-Net
 
-- 1차 U-Net : lr=1e-3, batchs=4, epochs=5
+- 1차 U-Net : `lr=1e-3, batchs=4, epochs=5`
     - 검증
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/df3d43eb-5473-4552-8e7c-d8759eb2bb57/image.png)
-        
+       ![image (9)](https://github.com/user-attachments/assets/99c08a41-f5a8-4735-9bee-36fbd77b5366)
+
     - 결과 시각화
         
         `Overall Mean IoU: 0.6662`
-        
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/d4da64c6-6113-47bc-a54e-b77b61658559/image.png)
+        ![image (10)](https://github.com/user-attachments/assets/083978cf-5102-4ff8-b35f-7dfac35e3643)
+
         
         - 성능 개선 방안
             
             : 라벨 값에 대한 예측 결과는 전반적으로 나쁘지 않았으나, 손실 함수 계산 과정에서 문제가 발생한 것으로 보인다. 특히, Loss 값이 음수로 출력되었으며, 이는 손실 함수 계산 방식이나 관련 설정에 오류가 있음을 의미한다.
             
-- 2차 U-Net :  lr=1e-4, batchs=4, epochs=5
+- 2차 U-Net :  `lr=1e-4, batchs=4, epochs=5`
     - validation loss 해결을 위한 변경사항
         - 손실함수 변경 `BCEWithLogitsLoss` → `CrossEntropyLoss` (다중클래스 문제)
         - 학습률 감소시켜보기 `1e-3` → `1e-4`
@@ -131,18 +128,16 @@ https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDat
         
         `Overall Mean IoU: 0.8042`
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/185f5870-affe-4e83-ac90-86bfdb1c86aa/image.png)
-        
+        ![image (11)](https://github.com/user-attachments/assets/67a96344-50e2-490f-845d-24ced114d561)
+
     - 결과 시각화
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/6ef636e4-6062-410d-894e-eb606b37900d/image.png)
-        
-- 3차 U-Net :  lr=1e-4, batchs=4, epochs=50
+        ![image (12)](https://github.com/user-attachments/assets/b7aff5a5-634e-4bae-ae99-42458d5b2c00)
+
+- 3차 U-Net :  `lr=1e-4, batchs=4, epochs=50`
     - 검증
-        
-        ![과적합이 발생하려고 했던 모습이 보인다. 
-        ⇒ 사용한 데이터셋의 특성상 유사한 이미지로 구성되어 있기 때문으로 추정된다.](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/1c43e88f-769b-4c48-98b2-55a24c0e59f4/image.png)
-        
+        ![image (13)](https://github.com/user-attachments/assets/0473e513-5c18-4669-ae47-c8db1ba3971e)
+
         과적합이 발생하려고 했던 모습이 보인다. 
         ⇒ 사용한 데이터셋의 특성상 유사한 이미지로 구성되어 있기 때문으로 추정된다.
         
@@ -150,17 +145,11 @@ https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDat
         
     - 결과 시각화
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/92860c0e-3b22-48db-a367-b11d306f270f/image.png)
-        
+       ![image (14)](https://github.com/user-attachments/assets/99cbc5e8-d660-4cce-b060-0ec5768ced90)
+
 
 ## 2. Mask-RCNN
 
-- 수정이 필요해 보이는 이미지 시각화
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/9ce6bdd9-62bb-4697-8701-8acbe70fc686/image.png)
-    
-    ⇒ 이미 소형차가 주차한 공간을 주차 가능 공간이라고 감지를 했다. 왜?
-    
 - 1차 Mask-RCNN
     - 최적화 Config : 최적화 모델로 Adam 을 사용하였는데, Mask-RCNN **모델 구조에 따라** learning rates 를 다르게 설정하였다.
         - **backbone** : `lr=0.00001`
@@ -172,7 +161,8 @@ https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDat
     - 모델 학습 Config : `epoch = 5, lr = 0.0001, batch = 8`
     - 검증
         
-        ![{4C8197F1-DDA6-42D5-BA31-22B0AD9B576F}.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/c2a29a42-c398-4e8d-9c47-ea889c9f31ef/4C8197F1-DDA6-42D5-BA31-22B0AD9B576F.png)
+       ![{4C8197F1-DDA6-42D5-BA31-22B0AD9B576F}](https://github.com/user-attachments/assets/84134341-2c4b-4291-be17-a07558d9bfd2)
+
         
         ⇒ 모델이 지정 데이터를 학습함에 있어 에폭수가 조금씩 높아짐에 따라 **Train loss** 와 **Validation loss** 모두 감소하는 경향을 보인다. 특히 **Train loss** 는 상당한 감소율을 보여준다.
         
@@ -182,19 +172,19 @@ https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDat
         
     - 결과 시각화
         
-        ![maskrcnn4.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/ff1305d9-97d4-4765-8364-107ef183ecc9/maskrcnn4.png)
-        
+       ![maskrcnn4](https://github.com/user-attachments/assets/702b7381-d62e-473f-bb98-faf8452dfd49)
+
         - Detection Statistics :
             - `Driveable Space` : **1 objects, Average confidence: 0.997**
         
-        ![maskrcnn5.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/e51b9ab9-b2ff-4d2b-81a0-483e03dcca60/maskrcnn5.png)
-        
+        ![maskrcnn5](https://github.com/user-attachments/assets/3cfb4c17-4269-481e-8b32-23fd801e5a7a)
+
         - Detection Statistics
             - `Parking Space` : **1 objects, Average confidence: 0.980**
             - `Driveable Space` : **1 objects, Average confidence: 0.998**
         
-        ![maskrcnn6.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/ac297e41-b9c8-4f45-8790-f1976e5efb5c/maskrcnn6.png)
-        
+        ![maskrcnn6](https://github.com/user-attachments/assets/27e5932d-6a98-409e-b33e-258e30548c81)
+
         - Detection Statistics
             - `Parking Space` : **1 objects, Average confidence: 0.909**
             - `Driveable Space` :  **2 objects, Average confidence: 0.997**
@@ -208,22 +198,21 @@ https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDat
     - Config : `epoch = 50, lr = 0.0001 , batch = 8`
     - 검증
         
-        ![스크린샷 2024-11-20 155107.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/ce08cd99-15a4-4431-9894-a994161c57d6/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2024-11-20_155107.png)
-        
-        ![스크린샷 2024-11-20 161350.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/857cecf5-7c4d-493a-b060-91b0eed16640/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2024-11-20_161350.png)
+       ![스크린샷 2024-11-20 155107](https://github.com/user-attachments/assets/3287415e-d6cc-4764-948c-1f310d5a03a7)
+
+       ![스크린샷 2024-11-20 161350](https://github.com/user-attachments/assets/4db356c5-42d3-4789-ae1e-a0ebe716db18)
+
         
         ⇒ 과적합입니다
         
     
     - 결과 시각화
         
-        
-        ![epoch50.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/88373469-f52c-49bc-9096-8b062f73f2aa/epoch50.png)
-        
-        ![epoch50_2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/0cd1c927-4a3e-4575-9945-68170d2960c6/epoch50_2.png)
-        
-        ![epoch50_3.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/2e970767-efca-4060-83fc-3e50a6c079a4/epoch50_3.png)
-        
+        ![epoch50](https://github.com/user-attachments/assets/59897669-94c6-4c31-8919-3a86ccd42518)
+
+       ![epoch50_2](https://github.com/user-attachments/assets/e8b7f42f-580d-4cd0-8a76-31c33a21f066)
+
+      ![epoch50_3](https://github.com/user-attachments/assets/7f0d7fcf-50b2-45a5-81a3-01d026fbc473)
 
 ---
 
@@ -231,78 +220,70 @@ https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDat
 
 **1차 DeepLabv3+**
 
-- epochs = 5, lr = 0.0001, batch=4
+- `epochs = 5, lr = 0.0001, batch=4`
 - 결과 시각화
 
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/ce9cfdfb-8f52-425e-895e-d40b62919cb9/download.png)
+![download (1)](https://github.com/user-attachments/assets/8c130252-3e1d-4463-a0a5-61e803abbf4b)
+![download (2)](https://github.com/user-attachments/assets/d741c34a-1d2a-44ea-9041-d3160e81df19)
 
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/83100145-b7c7-4252-b1ba-27d9c9efabfe/download.png)
+`Test Loss: 0.0349`
+![download (3)](https://github.com/user-attachments/assets/8cbce063-424b-405a-b716-548166e0ffaf)
 
-Test Loss: 0.0349
+![download (4)](https://github.com/user-attachments/assets/5c4d5ad4-2fbc-492d-a877-5e9288f640d5)
+![download (5)](https://github.com/user-attachments/assets/bc6bad5b-c6a9-4a45-b84b-98e5ed38595a)
 
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/42595255-7f6d-435f-94e2-6083e2a9fa2a/download.png)
-
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/7e6cde82-0e57-40c3-b9e9-5a25088596db/download.png)
-
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/7355a5ff-9f6a-4ee1-b75d-b708777806bb/download.png)
-
-Train Loss: 0.0249, Validation Loss: 0.0344
+`Train Loss: 0.0249, Validation Loss: 0.0344`
 
 낮은 에폭임에도 U-Net보다 좋은 성능을 보였다
 
 **2차 DeepLabv3+**
 
-- epochs = 50, lr = 0.0001, batch = 4
+- `epochs = 50, lr = 0.0001, batch = 4`
 - 결과 시각화
 
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/4c8ab7f6-5398-4573-bda3-c3b967a00fc9/download.png)
+![download (6)](https://github.com/user-attachments/assets/c4d87a0d-8098-4cb1-87d9-de5c8c557a5f)
 
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/44028368-155a-421a-b1af-ca3cf2f7d7c0/download.png)
+![download](https://github.com/user-attachments/assets/f5b5b3d4-46a2-4b7f-8440-ed9fbe4e80db)
 
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/ea0ea4cc-6724-4eaf-8b00-a08d999f8e98/download.png)
+![download (18)](https://github.com/user-attachments/assets/f499431e-ad9e-4d03-9aa9-4913386f1d6b)
 
-Test Loss: 0.0422
+`Test Loss: 0.0422`
 
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/2dfd6c53-d6dc-48b2-88bf-7f9dd7ff1049/download.png)
+![download](https://github.com/user-attachments/assets/c84ad0f9-ad9e-4082-87e0-83ab7a791492)
 
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/faa6b20d-e757-49d7-8cee-bc1d9caadf07/download.png)
-
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/37f5baeb-f081-4dcd-9e4b-6d2c63caa21d/download.png)
+![download (1)](https://github.com/user-attachments/assets/114f6a90-cbce-4c86-9535-6bbb2bb47eae)
+![download (2)](https://github.com/user-attachments/assets/72e57437-0cce-4b11-8d16-28ca49ba42b9)
 
 보다 개선된 세그멘테이션 결과를 확인할 수 있었다
 
 Train Loss: 0.0077, Validation Loss가 0.0418로 안정적인 수준을 보였다.
+![image](https://github.com/user-attachments/assets/52e14e98-868d-4909-9dc9-134ee15236a0)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/65779f41-7d34-4065-b90b-4165db27248f/image.png)
 
-mIoU: 0.8717 → 준수한 결과를 보임
+`mIoU: 0.8717` → 준수한 결과를 보임
 
 **3차 DeepLabv3**
 
-- epochs = 100, lr: = 0.001, batch = 4
+- `epochs = 100, lr: = 0.001, batch = 4`
 - 결과 시각화
+![download (3)](https://github.com/user-attachments/assets/6040dd6e-7775-4027-983d-7e8a41f433d5)
 
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/0291ac43-8b28-45e1-933e-a73bb987b37a/download.png)
+![download (4)](https://github.com/user-attachments/assets/a7a7c65d-76a9-4228-bb2d-cc2762dd54ec)
+![download (5)](https://github.com/user-attachments/assets/cf0893c3-e192-4232-98be-0d983c15ffd5)
 
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/31fb4ac7-0a35-4399-84de-1d07d3334e00/download.png)
+`Test Loss: 0.0688`
 
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/8300da0f-02b7-4e9c-8644-3fb59d08243e/download.png)
-
-Test Loss: 0.0688
-
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/3729450f-7820-4dca-b4d6-86c3f4630789/download.png)
-
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/026254d6-c829-4658-a91a-cb4c8ee7d5fc/download.png)
-
-![download.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/73467d1c-9a28-4775-ad86-c0b16b20e939/download.png)
+![download (6)](https://github.com/user-attachments/assets/151c1e27-7abe-41cb-b731-e8bf75e0b503)
+![download (7)](https://github.com/user-attachments/assets/4f87f8c7-1cb1-4787-b0a5-5737347c0847)
+![download (8)](https://github.com/user-attachments/assets/d467d615-2cec-4731-ac52-4f1e2fc68bc9)
 
 더 세밀하게 세그멘테이션을 수행한 모습을 확인할 수 있었다.
 
-Train Loss는 0.0056, Validation Loss는 0.0629로 다소 높은 수치를 기록
+`Train Loss는 0.0056, Validation Loss는 0.0629`로 다소 높은 수치를 기록
+![image (1)](https://github.com/user-attachments/assets/a09bd64b-f221-4864-a229-7163eaf81c66)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/b455e487-b2b1-4eca-8f7d-a9e98c8f0e9a/image.png)
 
-mIoU: 0.8353 → 감소하였다
+`mIoU: 0.8353` → 감소하였다
 
 학습률을 높인 결과 손실이 증가하여 과적합의 징후를 보여 추가적인 튜닝이 필요함을 보였다.
 
@@ -314,25 +295,24 @@ mIoU: 0.8353 → 감소하였다
 
 ### (1) 학습 및 평가 실행
 
-![{75148D8A-3A9C-4C58-9071-C5DAD1347950}.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/57512d83-727f-42a4-ac09-903c8850c224/75148D8A-3A9C-4C58-9071-C5DAD1347950.png)
+![{75148D8A-3A9C-4C58-9071-C5DAD1347950}](https://github.com/user-attachments/assets/460743e0-83b6-4805-964a-6b05b834190f)
 
 ⇒ 세가지 모델을 비교한 결과, 
-
 Mask R-CNN >> DeepLabv3+ >> U-Net 순서로 세그멘테이션 감지가 잘 되는 것으로 보인다.
 
 ### (2) 각 모델 세그멘테이션 결과 시각화
 
 - 이미지 예시 1
 
-![모든모델비교1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/9cdd7990-ba26-499d-8d8f-96ef7155a36c/%EB%AA%A8%EB%93%A0%EB%AA%A8%EB%8D%B8%EB%B9%84%EA%B5%901.png)
+![모든모델비교1](https://github.com/user-attachments/assets/75f7c2d3-d956-4601-88f7-6c672f09a6d8)
 
 - 이미지 예시 2
 
-![모든모델비교2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/bddaf8c2-77ac-4f65-bb72-87cd9b2d0fcc/%EB%AA%A8%EB%93%A0%EB%AA%A8%EB%8D%B8%EB%B9%84%EA%B5%902.png)
+![모든모델비교2](https://github.com/user-attachments/assets/307b8c34-5107-44f7-b5d3-5917750b706d)
 
 - 이미지 예시 3
+![모든모델비교3](https://github.com/user-attachments/assets/d5cf207e-1405-4008-9517-1f799a7e9cef)
 
-![모든모델비교3.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/a24f053f-8392-474a-b12c-91f84550bd9b/%EB%AA%A8%EB%93%A0%EB%AA%A8%EB%8D%B8%EB%B9%84%EA%B5%903.png)
 
 ## 시연영상
 (DeepLabV3+)
