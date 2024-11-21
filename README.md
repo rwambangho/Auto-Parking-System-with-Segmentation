@@ -1,16 +1,6 @@
 ## AI_Parking_Occupancy_Detection(Segmentation)
-(DeepLabV3+)
 ![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e88edaf2-1b40-47f6-a3fb-821d46000a67)
-
-(U-Net)
-![segmentation_imtovi_output-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/95a33910-a999-4a16-b24f-d36ecdd529d5)
-
-(Mask R-CNN)
-![Y2meta app-parkingspace_video_output_maskrcnn-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/9962bee8-c208-4364-8591-b293a0074c2e)
-
  
-
-
 ## 프로젝트 소개
 - 다양한 Segmentation 모델(U-Net, Mask-RCNN, DeepLabv3+)을 사용해서 자율 주행 자동차의 실내 주차 환경에서 주행가능 영역 및 주차 공간 탐지 성능을 비교하고, 각 모델의 성능을 최적화합니다.
 
@@ -343,4 +333,14 @@ Mask R-CNN >> DeepLabv3+ >> U-Net 순서로 세그멘테이션 감지가 잘 되
 - 이미지 예시 3
 
 ![모든모델비교3.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8e93c4f1-6ad9-4a70-8e85-041046be0f87/a24f053f-8392-474a-b12c-91f84550bd9b/%EB%AA%A8%EB%93%A0%EB%AA%A8%EB%8D%B8%EB%B9%84%EA%B5%903.png)
+
+## 시연영상
+(DeepLabV3+)
+![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e88edaf2-1b40-47f6-a3fb-821d46000a67)
+
+(U-Net)
+![segmentation_imtovi_output-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/95a33910-a999-4a16-b24f-d36ecdd529d5)
+
+(Mask R-CNN)
+![Y2meta app-parkingspace_video_output_maskrcnn-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/9962bee8-c208-4364-8591-b293a0074c2e)
 
